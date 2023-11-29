@@ -57,9 +57,9 @@ internal class Program
     {
         if (M > N)
         {
-            result = "Некорректный диапазон";
+            //result = "Некорректный диапазон";
             sum = 0;
-            return;
+            //return;
         }
 
         result = "\"";
