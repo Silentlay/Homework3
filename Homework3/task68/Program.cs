@@ -17,11 +17,21 @@ class Program
 
         int result = AckermannFunction(m, n);
 
-        Console.WriteLine($"A({m}, {n}) = {result}");
+        if (result != int.MinValue)
+        {
+            Console.WriteLine($"A({m}, {n}) = {result}");
+        }
+        
     }
 
     static int AckermannFunction(int m, int n)
     {
+        if (m < 0 || n < 0)
+        {
+            Console.WriteLine("Значения m и n должны быть положительными");
+            return int.MinValue;
+        }
+
         if (m == 0)
         {
             return n + 1;
